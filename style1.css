@@ -1,0 +1,287 @@
+/* ==========================================================
+   PORTFOLIO STYLES
+   Tip: change the 5 colours below and the whole page updates.
+   ========================================================== */
+:root {
+  --paper: #f4f7f5;   /* page background */
+  --ink:   #14302b;   /* main text and footer */
+  --leaf:  #1f6f5c;   /* main colour: buttons, borders, headings */
+  --sun:   #f4b63b;   /* accent colour */
+  --white: #ffffff;
+}
+
+/* ---------- Basics ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background-color: var(--paper);
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--leaf);
+}
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
+}
+
+/* ---------- Top bar (flexbox) ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 14px 24px;
+  background-color: var(--paper);
+  border-bottom: 2px solid var(--ink);
+}
+
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+}
+
+.menu a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: var(--leaf);
+  text-decoration: underline;
+}
+
+/* ---------- Page width ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.block {
+  padding: 48px 0;
+  border-top: 2px solid var(--ink);
+  scroll-margin-top: 70px;
+}
+
+.block h2 {
+  margin: 0 0 20px;
+  font-size: 1.9rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 64px 0 56px;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 3.4rem;
+}
+
+.tagline {
+  max-width: 28ch;
+  margin: 0 0 28px;
+  font-size: 1.3rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.portrait {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4rem;
+  color: var(--white);
+  background-color: var(--leaf);
+  border-radius: 24px;
+  box-shadow: 14px 14px 0 var(--sun);   /* the yellow block behind the photo */
+  object-fit: cover;                     /* keeps a real photo from stretching */
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 2px solid var(--leaf);
+  border-radius: 8px;
+  background-color: var(--leaf);
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--ink);
+  border-color: var(--ink);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--leaf);
+}
+
+.btn-outline:hover {
+  color: var(--white);
+}
+
+/* ---------- About ---------- */
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.about-grid p {
+  flex: 2 1 320px;
+  max-width: 60ch;
+  margin: 0;
+}
+
+.facts {
+  flex: 1 1 240px;
+  margin: 0;
+  padding: 0 0 0 20px;
+  border-left: 6px solid var(--sun);
+  list-style: none;
+}
+
+.facts li {
+  margin-bottom: 10px;
+}
+
+/* ---------- Skills ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 6px 18px;
+  border: 2px solid var(--leaf);
+  border-radius: 999px;
+  color: var(--leaf);
+  font-weight: 600;
+}
+
+/* ---------- Project cards (flexbox) ---------- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 240px;
+  padding: 20px 22px;
+  background-color: var(--white);
+  border-left: 6px solid var(--leaf);
+  border-radius: 4px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0 0 12px;
+}
+
+/* ---------- Contact ---------- */
+.email {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  margin: 8px 0 16px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--paper);
+  background-color: var(--ink);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ---------- Phones and small screens ---------- */
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 32px;
+    padding-top: 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .portrait {
+    width: 160px;
+    height: 160px;
+    font-size: 3rem;
+  }
+
+  .menu {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Respect people who turn off animations in their device settings */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
